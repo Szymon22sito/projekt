@@ -36,24 +36,23 @@ public class Main {
         }
     }
     private static LinkedList<Integer> zwrocTrafione(ArrayList<Integer> listaLiczbWpisanych,
-                                              ArrayList<Integer>listaLiczbLosowych){
-        LinkedList<Integer> trafione =new LinkedList<>();
+                                              ArrayList<Integer>listaLiczbLosowych) {
+        LinkedList<Integer> trafione = new LinkedList<>();
         //trafiione to elementy które występują w wylosowanych i wpisanych
-        for (Integer wpisana: listaLiczbWpisanych) {
-            if(listaLiczbLosowych.contains(wpisana)){
+        for (Integer wpisana : listaLiczbWpisanych) {
+            if (listaLiczbLosowych.contains(wpisana)) {
                 trafione.add(wpisana);
             }
         }
         return trafione;
-        public static void main(String[]Object args;
-        args) {
-            ArrayList<Integer> losowe = wylosujLiczby( 6);
+    }
+        public static void main(String[] args) {
+            //losowanie liczby
+            ArrayList<Integer> losowe = wylosujLiczby(6);
             System.out.println("wylosowana lista");
             wypiszKolekcjie(losowe);
             ArrayList<Integer> wpisane = wpiszLiczbyZKlawiatury(6);
             wypiszKolekcjie(wpisane);
             LinkedList<Integer> trafione = zwrocTrafione(losowe,wpisane);
             wypiszKolekcjie(trafione);
-
-        }
 }}
